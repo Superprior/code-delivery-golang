@@ -1,9 +1,9 @@
-import { Route, RouteDocument } from './entities/route.entity';
 import { Injectable } from '@nestjs/common';
-import { CreateRouteDto } from './dto/create-route.dto';
-import { UpdateRouteDto } from './dto/update-route.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { CreateRouteDto } from './dto/create-route.dto';
+import { UpdateRouteDto } from './dto/update-route.dto';
+import { Route, RouteDocument } from './entities/route.entity';
 
 @Injectable()
 export class RoutesService {

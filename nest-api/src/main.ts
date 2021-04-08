@@ -3,7 +3,8 @@ import { Transport } from '@nestjs/microservices';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { cors: true });
+
   app.connectMicroservice({
     transport: Transport.KAFKA,
     options: {
@@ -20,6 +21,7 @@ async function bootstrap() {
       },
     },
   });
+
   await app.startAllMicroservicesAsync();
   await app.listen(3000);
 }

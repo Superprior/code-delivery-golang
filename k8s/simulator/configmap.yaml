@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: simulator-conf
+data:
+  env: |    
+    KafkaReadTopic=route.new-direction
+    KafkaProduceTopic=route.new-position
+    KafkaBootstrapServers=host.docker.internal:9094
+    KafkaConsumerGroupId=simulator
+    bootstrap.servers=pkc-lzvrd.us-west4.gcp.confluent.cloud:9092
+    security.protocol=SASL_SSL
+    sasl.mechanisms=PLAIN
+    sasl.username=CHPKTMWK4DVMVNPK
+    sasl.password=LN1SX3s2/qRB/38Dpfjxn5iIV7NGEoYcidUrOhhIbYy9CKEyqMY7L2O5Askz8dCw
+

@@ -8,4 +8,4 @@ RUN apt-get update && \
 
 COPY . .
 RUN GOOS=linux go build -ldflags="-s -w" -o simulator
-ENTRYPOINT [ "./simulator" ]
+ENTRYPOINT ["./simulator"]

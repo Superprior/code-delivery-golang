@@ -48,11 +48,11 @@ func (r *Route) LoadPositions() error {
 	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {
 		data := strings.Split(scanner.Text(), ",")
-		lat, err := strconv.ParseFloat(data[0], 64)
+		lat, err := strconv.ParseFloat(data[1], 64)
 		if err != nil {
 			return nil
 		}
-		long, err := strconv.ParseFloat(data[1], 64)
+		long, err := strconv.ParseFloat(data[0], 64)
 		if err != nil {
 			return nil
 		}
@@ -69,6 +69,7 @@ func (r *Route) ExportJsonPositions() ([]string, error) {
 	var route PartialRoutePosition
 	var result []string
 	total := len(r.Positions)
+
 	for k, v := range r.Positions {
 		route.ID = r.ID
 		route.ClientID = r.ClientID
@@ -83,5 +84,6 @@ func (r *Route) ExportJsonPositions() ([]string, error) {
 		}
 		result = append(result, string(jsonRoute))
 	}
+
 	return result, nil
 }

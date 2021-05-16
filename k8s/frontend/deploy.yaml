@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: wesleywillians/imersao2-frontend:latest
+          image: messias198/real-time-delivery-frontend:latest
           ports:
             - containerPort: 80

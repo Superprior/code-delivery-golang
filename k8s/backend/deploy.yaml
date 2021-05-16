@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: wesleywillians/imersao2-backend
+          image: messias198/real-time-delivery-backend
           ports:
             - containerPort: 3000
           volumeMounts:

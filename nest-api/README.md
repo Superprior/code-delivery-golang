@@ -1,5 +1,5 @@
 ## About
-- Nest.JS repository (Backend)
+- Nest.js repository (Backend)
 
 ---
 
@@ -11,6 +11,6 @@
 
 Execute:
 
-```
+```bash
 docker-compose up
 ```

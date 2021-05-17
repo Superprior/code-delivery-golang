@@ -1,0 +1,15 @@
+## About
+- Golang repository (Backend) 
+
+**Importante**: The [apache-kafka](https://github.com/MessiasJunio/real-time-delivery/tree/main/apache-kafka) application must be running first.
+## Run the application
+
+Execute os commands:
+
+```
+docker-compose up -d
+
+docker-compose exec app bash
+
+go run main.go
+```

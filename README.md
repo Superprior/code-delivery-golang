@@ -38,7 +38,7 @@ Add to your /etc/hosts (For Windows the path is  C:\Windows\system32\drivers\etc
 
 ## Production Mode
 Deploy and scalability:
-- [k8s](https://github.com/codeedu/imersao-fsfc2/tree/main/k8s)
+- [k8s](https://github.com/MessiasJunio/real-time-delivery/tree/main/k8s)
 ---
 
 ## Learn More

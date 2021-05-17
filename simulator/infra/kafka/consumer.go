@@ -21,8 +21,15 @@ func NewKafkaConsumer(msgChan chan *ckafka.Message) *KafkaConsumer {
 	}
 }
 
-// Consume consumes all message pulled from apache kafka and sent it to message channel
-func (k *KafkaConsumer) Consume() {
+func configMapConsumerDevelopment() *ckafka.ConfigMap {
+	configMap := &ckafka.ConfigMap{
+		"bootstrap.servers": os.Getenv("KafkaBootstrapServers"),
+	}
+
+	return configMap
+}
+
+func configMapConsumerProduction() *ckafka.ConfigMap {
 	configMap := &ckafka.ConfigMap{
 		"bootstrap.servers": os.Getenv("KafkaBootstrapServers"),
 		"group.id":          os.Getenv("KafkaConsumerGroupId"),
@@ -31,6 +38,14 @@ func (k *KafkaConsumer) Consume() {
 		"sasl.username":     os.Getenv("sasl.username"),
 		"sasl.password":     os.Getenv("sasl.password"),
 	}
+
+	return configMap
+}
+
+// Consume consumes all message pulled from apache kafka and sent it to message channel
+func (k *KafkaConsumer) Consume() {
+	configMap := configMapConsumerDevelopment()
+
 	c, err := ckafka.NewConsumer(configMap)
 	if err != nil {
 		log.Fatalf("error consuming kafka message:" + err.Error())

@@ -7,8 +7,15 @@ import (
 	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
 )
 
-// NewKafkaProducer creates a ready to go kafka.Producer instance
-func NewKafkaProducer() *ckafka.Producer {
+func configMapProducerDevelopment() *ckafka.ConfigMap {
+	configMap := &ckafka.ConfigMap{
+		"bootstrap.servers": os.Getenv("KafkaBootstrapServers"),
+	}
+
+	return configMap
+}
+
+func configMapProducerProduction() *ckafka.ConfigMap {
 	configMap := &ckafka.ConfigMap{
 		"bootstrap.servers": os.Getenv("KafkaBootstrapServers"),
 		"security.protocol": os.Getenv("security.protocol"),
@@ -16,6 +23,14 @@ func NewKafkaProducer() *ckafka.Producer {
 		"sasl.username":     os.Getenv("sasl.username"),
 		"sasl.password":     os.Getenv("sasl.password"),
 	}
+
+	return configMap
+}
+
+// NewKafkaProducer creates a ready to go kafka.Producer instance
+func NewKafkaProducer() *ckafka.Producer {
+	configMap := configMapProducerDevelopment()
+
 	p, err := ckafka.NewProducer(configMap)
 	if err != nil {
 		log.Println(err.Error())

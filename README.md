@@ -39,8 +39,6 @@ Deploy and scalability:
 - [k8s](https://github.com/codeedu/imersao-fsfc2/tree/main/k8s)
 ---
 
-&nbsp;
-
 ## Learn More
 
 ## Deploy with Google Cloud and Kubernetes:

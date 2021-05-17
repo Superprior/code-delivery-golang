@@ -62,7 +62,7 @@ export const Mapping: FunctionComponent = () => {
 
   const finishRoute = useCallback(
     (route: Route) => {
-      enqueueSnackbar(`${route.title} Finished!`, {
+      enqueueSnackbar(`${route.title} finalizou!`, {
         variant: "success",
       });
       mapRef.current?.removeRoute(route._id);
@@ -73,7 +73,7 @@ export const Mapping: FunctionComponent = () => {
   useEffect(() => {
     if (!socketIORef.current?.connected) {
       socketIORef.current = io.connect(API_URL);
-      socketIORef.current.on("connect", () => console.log("connected"));
+      socketIORef.current.on("connect", () => console.log("conectou"));
     }
 
     const handler = (data: {

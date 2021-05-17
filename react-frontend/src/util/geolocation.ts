@@ -1,3 +1,4 @@
+
 export function getCurrentPosition(
   options?: PositionOptions
 ): Promise<{ lat: number; lng: number }> {

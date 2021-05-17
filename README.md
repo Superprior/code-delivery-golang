@@ -26,8 +26,6 @@ Add to your /etc/hosts (For Windows the path is  C:\Windows\system32\drivers\etc
 ```
 127.0.0.1 host.docker.internal
 ```
----
-
 ## Installation instructions are in the README.md of each project
 ---
 ## Development Mode
@@ -35,7 +33,7 @@ Add to your /etc/hosts (For Windows the path is  C:\Windows\system32\drivers\etc
 - [simulator](https://github.com/MessiasJunio/real-time-delivery/tree/main/simulator)
 - [nest-api](https://github.com/MessiasJunio/real-time-delivery/tree/main/nest-api)
 - [react-frontend](https://github.com/MessiasJunio/real-time-delivery/tree/main/nest-api)
---- 
+
 ## Production Mode
 Deploy and scalability:
 - [k8s](https://github.com/codeedu/imersao-fsfc2/tree/main/k8s)

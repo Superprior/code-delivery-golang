@@ -1,5 +1,5 @@
 ## About
-- Kubernetes deploy
+- Kubernetes for production deploy
 
 ---
 

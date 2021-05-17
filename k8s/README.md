@@ -3,10 +3,6 @@
 
 ---
 
-**Notice**: The [apache-kafka](https://github.com/MessiasJunio/real-time-delivery/tree/main/apache-kafka) and [simulator](https://github.com/MessiasJunio/real-time-delivery/tree/main/simulator) applications must be running first.
-
----
-
 ## Run the application
 Before:
 - Generate Kafka cluster API key & secret, [Confluent](https://www.confluent.io/)

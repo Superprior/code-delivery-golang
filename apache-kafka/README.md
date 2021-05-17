@@ -2,7 +2,7 @@
 - Apache Kafka Repository (Backend) 
 ## Run the application
 
-Execute os commands:
+Run commands:
 
 ```
 docker-compose up

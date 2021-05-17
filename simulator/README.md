@@ -9,7 +9,7 @@
 
 ## Run the application
 
-Run commands:
+Execute:
 
 ```
 docker-compose up -d

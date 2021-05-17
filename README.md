@@ -41,7 +41,7 @@ Deploy and scalability:
 
 ## Learn More
 
-## Deploy with Google Cloud and Kubernetes:
+### Deploy with Google Cloud and Kubernetes:
 
 Deploying a containerized web application: https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
 

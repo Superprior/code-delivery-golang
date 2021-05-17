@@ -6,8 +6,10 @@
   <img src="./.github/demo1.png" alt="Image of a robot behind a notebook." />
 </p>
 
-## What is inside?
+## About
+- A web application that simulates real-time delivery services using google maps
 
+## What is inside?
 This project uses lot of stuff as:
 
 - [Golang](https://golang.org/)

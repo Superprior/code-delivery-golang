@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img src="./.github/logo.png" alt="Image of an atom and React Boilerplate written beside."/>
+    <img src="./.github/logo.png" alt="Image Car"/>
 </h1>
 
 <p align="center">
-  <img src="./.github/demo1.png" alt="Image of a robot behind a notebook." />
+  <img src="./.github/demo1.png" alt="Image of a map and car route delivery" />
 </p>
 
 ## About
